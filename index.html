@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sponsero | Ваш помощник для продвижения через лидеров мнений в Instagram</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header class="header">
+    <nav class="header__nav">
+        <a href="/" class="header__logo"></a>
+        <a href="http://beta.sponsero.com" class="header__signin" target="_blank" rel="noopener">Войти</a>
+    </nav>
+    <div class="header__wrapper">
+        <h1 class="header__title">Помогаем брендам вести кампании маркетинга влияния</h1>
+        <p class="header__desc">Sponsero — это платформа для поиска блогеров и управления кампаниями в Instagram</p>
+        <a href="./form.html" class="header__button">Запросить доступ</a>
+    </div>
+</header>
+<section class="partners">
+    <div class="partners__container">
+        <h2 class="partners__title">С нами работают</h2>
+        <img src="./images/marco.svg" alt="Marc O'Polo" class="partners__item">
+        <img src="./images/crocs.svg" alt="CROCS" class="partners__item">
+        <img src="./images/timber.svg" alt="Timberland" class="partners__item">
+        <img src="./images/fox.svg" alt="FOODFOX" class="partners__item">
+        <img src="./images/juicy.svg" alt="Juice Couture" class="partners__item">
+        <img src="./images/nb.svg" alt="New Balance" class="partners__item">
+    </div>
+</section>
+
+<section class="steps">
+    <div class="steps__container">
+        <div class="steps__row">
+            <p class="steps__text">Люди обращают все меньше внимания на традиционную рекламу</p>
+            <img class="steps__img" src="./images/step_1.png" alt="">
+            <img class="steps__arrow" src="./images/path_1.svg" alt="">
+        </div>
+        <div class="steps__row steps__row_reverse">
+            <p class="steps__text">Сегодня их ориентирами становятся блогеры – именно у них люди ищут вдохновения и совета</p>
+            <div class="steps__wrapper">
+                <img class="steps__img" src="./images/step_2.png" alt="">
+            </div>
+            <img class="steps__arrow" src="./images/path_2.svg" alt="">
+        </div>
+        <div class="steps__row">
+            <p class="steps__text">Поэтому брендам необходимо обращаться к лидерам мнений, чтобы поддерживать связь с целевой аудиторией </p>
+            <img class="steps__img" src="./images/step_3.svg" alt="">
+            <img class="steps__arrow" src="./images/path_3.svg" alt="">
+        </div>
+        <div class="steps__row steps__row_reverse">
+            <p class="steps__text">Но для проведения успешной кампании с блогерами нужен надежный помощник</p>
+            <div class="steps__wrapper">
+                <img class="steps__img" src="./images/step_4.svg" alt="">
+            </div>
+            <img class="steps__arrow" src="./images/path_4.svg" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="slider" class="description slide0">
+    <div class="mission">
+        <div class="mission__container">
+            <p class="mission__text">Миссия Sponsero — помочь вам <span class="mission__text_bold">найти самых лучших блогеров</span></p>
+        </div>
+    </div>
+
+    <div class="description__container">
+        <nav class="description__nav">
+            <a class="description__nav__item description__nav__item_active" href="#">Поиск</a>
+            <a class="description__nav__item" href="#">Кампания</a>
+            <a class="description__nav__item" href="#">Общение</a>
+        </nav>
+        <div id="slide0" class="description__slide">
+            <p class="description__title">Выбирайте лучших</p>
+            <ul class="description__list">
+                <li class="description__list__item">Ищите среди 20 000 Instagram-аккаунтов.</li>
+                <li class="description__list__item">Учитывайте количество подписчиков, город, тематику, engagement rate и собственные теги.</li>
+                <li class="description__list__item">Сохраняйте блогеров в Excel или сразу создавайте с ними кампании в Sponsero.</li>
+            </ul>
+        </div>
+        <div id="slide1" class="description__slide">
+            <p class="description__title">Управляйте кампаниями в Instagram</p>
+            <ul class="description__list">
+                <li class="description__list__item">Создавайте сколько угодно кампаний с найденными или импортированными блогерами.</li>
+                <li class="description__list__item">Планируйте выход публикаций в каждой кампании согласно охвату и тематике.</li>
+                <li class="description__list__item">Задавайте и следите за бюджетом и KPI каждой кампании.</li>
+            </ul>
+        </div>
+        <div id="slide2" class="description__slide">
+            <p class="description__title">Соберите переписку в одном окне</p>
+            <ul class="description__list">
+                <li class="description__list__item">Общайтесь с блогерами прямо в Sponsero через Instagram Direct или по электронной почте.</li>
+                <li class="description__list__item">Экономьте время с помощью автоматических рассылок.</li>
+                <li class="description__list__item">Управляйте шаблонами приглашений и ответов блогерам.</li>
+            </ul>
+        </div>
+        <a href="./form.html" class="description__button">Запросить доступ</a>
+    </div>
+</section>
+<script>
+    (function(w,d) {
+        var slider = d.getElementById('slider');
+        var slide1 = d.getElementById('slide1');
+        var slide2 = d.getElementById('slide1');
+        var slide3 = d.getElementById('slide1');
+        var links = d.getElementsByClassName('description__nav__item');
+
+        for (var i = 0; i < links.length; i++) {
+            (function (i,slider, links){
+                links[i].addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    for (var j = 0; j < links.length; j++) {
+                        links[j].classList.remove('description__nav__item_active');
+                    }
+
+                    this.classList.add('description__nav__item_active');
+                    slider.classList.remove('slide0', 'slide1', 'slide2');
+                    slider.classList.add('slide'+i);
+                });
+            })(i, slider, links);
+            
+        }
+
+    })(window, document);
+</script>
+
+<footer class="footer">
+    <div class="footer__container">
+        <a href="/" class="footer__logo">
+            <img src="./images/logo-footer.svg" alt="">
+        </a>
+        <a class="footer__mail" href="mailto:info@sponsero.ru">info@sponsero.ru</a>
+        <div class="footer__social">
+                <a class="footer__social__item footer__social__item_facebook" href="https://www.facebook.com/sponsero/" target="_blank" rel="noopener"></a>
+                <a class="footer__social__item footer__social__item_instagram" href="https://www.instagram.com/sponsero.ru/" target="_blank" rel="noopener"></a>
+        </div>
+        <div class="footer__wrapper">
+            <a href="#" class="footer__wrapper__privacy">Пользовательское соглашение</a>
+            <span class="footer__wrapper__copyright">&copy; 2017 Sponsero</span>
+        </div>
+    </div>
+</footer>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46726938 = new Ya.Metrika({
+                    id:46726938,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46726938" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

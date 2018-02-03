@@ -1,0 +1,175 @@
+.form {
+  padding: 80px 15px 65px;
+
+  &__container {
+    max-width: 930px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    max-width: 49%;
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    font: 500 12px 'Roboto', sans-serif;
+    color: #384a60;
+
+    &_active {
+      color: #3b7bc9;
+
+      .form__input {
+        border-color: #3b7bc9;
+      }
+    }
+
+    &_required {
+      color: #384a60;
+    }
+
+    &_optional {
+      color: #dae2ec;
+    }
+
+    &:focus {
+      color: white;
+    }
+
+    & + & {
+      margin-top: 13px;
+    }
+
+    &_error {
+      .form__error {
+        visibility: visible;
+      }
+
+      .form__input {
+        border-color: #e34a6f;
+      }
+    }
+  }
+
+  &__input {
+    max-width: 360px;
+    width: 100%;
+    padding: 8px 0;
+    font: 400 14px 'Roboto', sans-serif;
+    color: #384a60;
+    border: 0;
+    border-bottom: 1px solid #dae2ec;
+    outline: none;
+    transition: border-color 0.2s linear;
+  }
+
+  &__error {
+    display: inline-block;
+    margin-top: 4px;
+    visibility: hidden;
+    font: 400 10px 'Roboto', sans-serif;
+    color: #e34a6f;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 15px 15px;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 9px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font: 500 18px 'Roboto', sans-serif;
+    color: #ffffff;
+    background: rgba(227, 74, 111, 1);
+    border-radius: 2px;
+    text-align: center;
+    transition: background 0.2s linear;
+    box-sizing: border-box;
+
+    &:hover {
+      background: rgba(227, 74, 111, 0.5);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font: 400 24px 'Roboto', sans-serif;
+    color: #3b7bc9;
+  }
+
+  &__text {
+    &_mob {
+      display: none;
+    }
+  }
+
+  &__text,
+  &__list__item {
+    margin: 16px 0 0;
+    font: 400 14px 'Roboto', sans-serif;
+    color: #384a60;
+    line-height: 20px;
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+
+    &__item {
+      padding-left: 20px;
+      background: url("../images/heart-blue.svg") no-repeat top 6px left;
+
+      & + & {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    background: #f8fafb;
+
+    &__text {
+      &_desc {
+        display: none;
+      }
+
+      &_mob {
+        display: inline;
+      }
+    }
+
+    &__wrapper {
+      max-width: 360px;
+    }
+
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    &__input {
+      background: #f8fafb;
+    }
+
+    &__button {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      max-width: 310px;
+    }
+
+    &__title {
+      margin-top: 40px;
+    }
+  }
+}

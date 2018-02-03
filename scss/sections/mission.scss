@@ -1,0 +1,40 @@
+.mission {
+  position: absolute;
+  top: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 715px;
+  width: 100%;
+  background-color: #fcfcfc;
+  border-radius: 2px;
+  box-shadow: 0 3px 12px 0 #384a60;
+
+  &__container {
+    padding: 40px 32px;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0;
+    font: 400 42px 'Roboto', sans-serif;
+    color: #384a60;
+
+    &_bold {
+      font-weight: 600;
+      color: #e34a6f;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mission {
+    position: initial;
+    transform: none;
+    border-radius: 0;
+    box-shadow: 0 3px 12px 0 #384a60;
+
+    &__text {
+      font-size: 24px;
+    }
+  }
+}

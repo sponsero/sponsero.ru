@@ -1,0 +1,42 @@
+.partners {
+  background-color: rgb(248, 250, 251);
+
+  &__title {
+    margin: 0 0 20px;
+    width: 100%;
+    font: 600 24px 'Roboto', sans-serif;
+    color: rgba(56, 74, 96, 1);
+    text-align: center;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 10px 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .partners {
+    &__title {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    &__item {
+      max-width: 120px;
+      max-height: 48px;
+    }
+
+    &__container {
+      justify-content: space-around;
+    }
+  }
+}

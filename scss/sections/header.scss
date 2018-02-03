@@ -1,0 +1,129 @@
+.header {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  background: url("../images/header.jpg") no-repeat center;
+  background-size: cover;
+  padding-bottom: 47px;
+
+  &__nav {
+    padding: 40px 15px 0;
+    margin: 0 auto;
+    max-width: 930px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    &_center {
+      padding: 30px 15px;
+      justify-content: center;
+      background: #3e5471;
+      max-width: 100%;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    height: 20px;
+    width: 165px;
+    background: url("../images/logo-header.svg") no-repeat center;
+  }
+
+  &__signin {
+    padding: 9px 15px 7px 39px;
+    font: 500 18px 'Roboto', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    background: url("../images/user_white.svg") no-repeat center left 10px;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    font: 400 42px 'Roboto', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 47px;
+  }
+
+  &__desc {
+    max-width: 680px;
+    width: 100%;
+    margin: 24px auto 0;
+    font: 400 24px 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 32px;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 15px 37px;
+    margin-top: 65px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font: 500 18px 'Roboto', sans-serif;
+    color: #ffffff;
+    background: rgba(227, 74, 111, 1);
+    border-radius: 2px;
+    transition: background 0.2s linear;
+
+    &:hover {
+      background: rgba(227, 74, 111, 0.5);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    min-height: auto;
+    height: auto;
+
+    &__nav {
+      justify-content: center;
+    }
+
+    &__signin {
+      display: none;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    
+    &__wrapper {
+      margin-top: 60px;
+      position: initial;
+      transform: none;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+
+    &__desc {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__button {
+      margin-top: 60px;
+    }
+  }
+}

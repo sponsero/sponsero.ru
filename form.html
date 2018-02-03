@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sponsero | Ваш помощник для продвижения через лидеров мнений в Instagram</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<nav class="header__nav header__nav_center">
+    <a href="/" class="header__logo"></a>
+</nav>
+
+<section class="form">
+    <div class="form__container">
+        <form id="form" class="form__wrapper" method="POST">
+            <label class="form__label">
+                Имя <span class="form__label_required">*</span><br>
+                <input id="firstName" type="text" class="form__input" value="" placeholder="Ваше имя" required="true" name="firstName"><br>
+                <span class="form__error">Пожалуйста, заполните это поле, чтобы мы могли связаться с вами</span>
+            </label>
+            <label class="form__label">
+                Фамилия <span class="form__label_optional">*</span><br>
+                <input id="lastName" type="text" class="form__input" placeholder="Ваша фамилия" name="lastName"><br>
+                <span class="form__error">Пожалуйста, заполните это поле, чтобы мы могли связаться с вами</span>
+            </label>
+            <!-- form__label_error -->
+            <label class="form__label">
+                Email <span class="form__label_required">*</span><br>
+                <input id="email" type="email" class="form__input" required="true" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Ваша эл. почта"><br>
+                <span class="form__error">Пожалуйста, заполните это поле, чтобы мы могли связаться с вами</span>
+            </label>
+            <label class="form__label">
+                Телефон <span class="form__label_required">*</span><br>
+                <input id="phone" type="text" class="form__input" required="true" name="phone" placeholder="Ваш телефон"><br>
+                <span class="form__error">Пожалуйста, заполните это поле, чтобы мы могли связаться с вами</span>
+            </label>
+            <label class="form__label">
+                Компания <span class="form__label_required">*</span><br>
+                <input id="company" type="text" class="form__input" required="true" name="company" placeholder="Ваша компания"><br>
+                <span class="form__error">Пожалуйста, заполните это поле, чтобы мы могли связаться с вами</span>
+            </label>
+            <button name="submit" type="submit" class="form__button" value="" >Запросить доступ</button>
+        </form>
+        <div class="form__wrapper">
+            <h1 class="form__title">Sponsero поможет вашему бренду развить отношения с лидерами мнений</h1>
+            <p class="form__text">
+                Заполните форму <span class="form__text_desc">слева</span> <span class="form__text_mob">сверху</span> и получите демо-доступ к платформе на 7 дней. За это время мы покажем вам:
+            </p>
+            <ul class="form__list">
+                <li class="form__list__item">Как найти лучших блогеров для вашей кампании и целевой аудитории за 30 секунд. </li>
+                <li class="form__list__item">Как планировать публикации, управлять кампанией  и отслеживать ее показатели без 100 Excel-табличек. </li>
+                <li class="form__list__item">Как автоматизировать общение с блогерами и сделать его максимально плодотворным для обеих сторон. </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function(w) {
+        if (w.FormData)
+            return;
+        function FormData() {
+            this.fake = true;
+            this.boundary = "--------FormData" + Math.random();
+            this._fields = [];
+        }
+        FormData.prototype.append = function(key, value) {
+            this._fields.push([key, value]);
+        }
+        FormData.prototype.toString = function() {
+            var boundary = this.boundary;
+            var body = "";
+            this._fields.forEach(function(field) {
+                body += "--" + boundary + "\r\n";
+                // file upload
+                if (field[1].name) {
+                    var file = field[1];
+                    body += "Content-Disposition: form-data; name=\""+ field[0] +"\"; filename=\""+ file.name +"\"\r\n";
+                    body += "Content-Type: "+ file.type +"\r\n\r\n";
+                    body += file.getAsBinary() + "\r\n";
+                } else {
+                    body += "Content-Disposition: form-data; name=\""+ field[0] +"\";\r\n\r\n";
+                    body += field[1] + "\r\n";
+                }
+            });
+            body += "--" + boundary +"--";
+            return body;
+        }
+        w.FormData = FormData;
+    })(window);
+</script>
+<script>
+    (function (w, d) {
+        var addOnActive = function (e) {
+            this.parentNode.classList.add('form__label_active');
+        };
+        var removeOnActive = function () {
+            this.parentNode.classList.remove('form__label_active');
+        };
+        var inputs = d.getElementsByTagName('input');
+        for (i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('focus', addOnActive);
+            inputs[i].addEventListener('blur', removeOnActive);
+        }
+
+    })(window, document);
+</script>
+
+<footer class="footer">
+    <div class="footer__container">
+        <a href="/" class="footer__logo">
+            <img src="./images/logo-footer.svg" alt="">
+        </a>
+        <a class="footer__mail" href="mailto:info@sponsero.ru">info@sponsero.ru</a>
+        <div class="footer__social">
+            <a class="footer__social__item footer__social__item_facebook" href="https://www.facebook.com/sponsero/" target="_blank" rel="noopener"></a>
+            <a class="footer__social__item footer__social__item_instagram" href="https://www.instagram.com/sponsero.ru/" target="_blank" rel="noopener"></a>
+        </div>
+        <div class="footer__wrapper">
+            <a href="#" class="footer__wrapper__privacy">Пользовательское соглашение</a>
+            <span class="footer__wrapper__copyright">&copy; 2017 Sponsero</span>
+        </div>
+    </div>
+</footer>
+
+<div id="success" class="success">
+    <div class="success__container">
+        <div class="success__wrapper">
+            <img src="./images/noun.svg" alt="" class="success__img">
+            <p class="success__title">Мы получили ваш запрос</p>
+            <p class="success__text">Спасибо! Один из наших специалистов свяжется с вами в ближайшие 48 часов, чтобы дать доступ к платформе Sponsero и помочь в ее использовании.</p>
+            <a href="/" class="success__button">На сайт Sponsero</a>
+        </div>
+        <a id="success-close" href="#" class="success__close"></a>
+    </div>
+</div>
+<script>
+    (function () {
+
+        var form = document.getElementById('form');
+        var container = document.getElementById('success')
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var data = new FormData(form);
+            var req = new XMLHttpRequest();
+            req.open('POST', 'http://sponsero.ru/send.php', true);
+            req.onreadystatechange = function () {
+                if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
+                    container.style.display = 'block';
+                }
+            };
+            req.send(data);
+        });
+
+        var close = document.getElementById('success-close');
+        close.addEventListener('click', function (e) {
+            e.preventDefault();
+            container.style.display = 'none';
+        })
+    })()
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46726938 = new Ya.Metrika({
+                    id:46726938,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46726938" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+.description {
+  position: relative;
+  margin-top: 218px;
+  background: #384a60 url("../images/macbook_1.png") no-repeat top 90% right;
+
+  &.slide0 {
+    background: #384a60 url("../images/macbook_1.png") no-repeat top 90% right;
+  }
+
+  &.slide1 {
+    background: #384a60 url("../images/macbook_2.png") no-repeat top 90% right;
+  }
+
+  &.slide2 {
+    background: #384a60 url("../images/macbook_3.png") no-repeat top 90% right;
+  }
+
+  &__container {
+    padding: 87px 15px 158px;
+    max-width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+
+    &__item {
+      color: #96aeca;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s linear;
+
+      &_active {
+        color: #69f9b7;
+      }
+
+      &:hover {
+        color: #69f9b7;
+      }
+    }
+  }
+
+  &__title {
+    margin: 43px 0 0;
+    font: 500 24px 'Roboto', sans-serif;
+    color: #ffffff;
+  }
+
+  &__list {
+    margin: 25px 0 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+      max-width: 550px;
+      padding-left: 21px;
+      font: 400 16px/24px 'Roboto', sans-serif;
+      color: #ffffff;
+      background: url("../images/heart.svg") no-repeat top 6px left;
+
+      & + & {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 15px 37px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font: 500 18px 'Roboto', sans-serif;
+    color: #ffffff;
+    background: rgba(227, 74, 111, 1);
+    border-radius: 2px;
+    transition: background 0.2s linear;
+
+    &:hover {
+      background: rgba(227, 74, 111, 0.5);
+    }
+  }
+
+  &__slide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .description {
+    background-size: 400px auto;
+    background-position: center right;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .description {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .description {
+    margin-top: 0;
+    background: #384a60 url("../images/macbook_small_1.png") no-repeat center bottom -20px;
+    background-size: auto;
+
+    &__container {
+      padding-top: 30px;
+      padding-bottom: 267px;
+      max-width: 300px;
+    }
+
+    &__nav {
+      text-align: center;
+    }
+
+    &__button {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 263px;
+      box-sizing: border-box;
+    }
+  }
+  .description.slide0 {
+    background: #384a60 url("../images/macbook_small_1.png") no-repeat center bottom -20px;
+  }
+  .description.slide1 {
+    background: #384a60 url("../images/macbook_small_2.png") no-repeat center bottom -20px;
+  }
+  .description.slide2 {
+    background: #384a60 url("../images/macbook_small_3.png") no-repeat center bottom -20px;
+  }
+}
+
+#slider.slide0 #slide0 {
+  display: block;
+}
+#slider.slide1 #slide1 {
+  display: block;
+}
+#slider.slide2 #slide2 {
+  display: block;
+}
